@@ -1,6 +1,6 @@
 /* GStreamer
  * Copyright (C) 2008 Wim Taymans <wim.taymans at gmail.com>
- * 
+ *  
  * Modified by dkorobkov@github.com to enable vaapiencode_h264
  * in gst-rtsp-server RTSP streamer. Works on my E3845 with vaapi 1.6
  * and gstreamer-1.6:
@@ -77,9 +77,7 @@ need_data (GstElement * appsrc, guint unused, MyContext * ctx)
 
   g_signal_emit_by_name (appsrc, "push-buffer", buffer, &ret);
 
-  // add to prevent memory leak
-  gst_buffer_unref(buffer);
-
+  gst_buffer_unref(buffer); // dkorobkov: add to prevent memory leak
 }
 
 /* called when a new media pipeline is constructed. We can query the
