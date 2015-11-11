@@ -1,6 +1,6 @@
 /* GStreamer
  * Copyright (C) 2008 Wim Taymans <wim.taymans at gmail.com>
- * 
+ *  
  * Modified by dkorobkov@github.com to enable vaapiencode_h264
  * in gst-rtsp-server RTSP streamer. Works on my E3845 with vaapi 1.6
  * and gstreamer-1.6:
